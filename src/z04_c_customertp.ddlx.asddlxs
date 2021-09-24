@@ -1,0 +1,48 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo.typeName: 'Flight Customers'
+@UI.headerInfo.typeNamePlural: 'Flight Customer'
+@UI.headerInfo.title: { value: 'CustomerName' }
+@UI.headerInfo.description: { value: 'City' }
+annotate view Z04_C_CUSTOMERTP
+    with 
+{
+    @UI.facet: [{ label: 'Customer Data',
+                  type: #IDENTIFICATION_REFERENCE },
+                { label: 'Bookings',
+                  type: #LINEITEM_REFERENCE,
+                  targetElement: '_Booking' }]
+    @UI.hidden: true
+    CustomerGuid;
+    @UI.lineItem: [{ importance: #HIGH }]
+    @UI.identification: [{ importance: #HIGH }]
+    CustomerNumber;
+    @UI.identification: [{ importance: #MEDIUM }]
+    Form;
+    @UI.lineItem: [{ importance: #HIGH }]
+    @UI.identification: [{ importance: #HIGH }]
+    CustomerName;
+    @UI.lineItem: [{ importance: #MEDIUM }]
+    @UI.identification: [{ importance: #MEDIUM }]
+    Street;
+    @UI.lineItem: [{ importance: #MEDIUM }]
+    @UI.selectionField: [{ position: 50 }]
+    @UI.identification: [{ importance: #MEDIUM }]
+    PostCode;
+    @UI.lineItem: [{ importance: #HIGH }]
+    @UI.identification: [{ importance: #HIGH }]
+    City;
+    @UI.lineItem: [{ importance: #MEDIUM }]
+    @UI.selectionField: [{ position: 50 }]
+    @UI.identification: [{ importance: #MEDIUM }]
+    Country;
+    @UI.lineItem: [{ importance: #MEDIUM }]
+    @UI.identification: [{ importance: #MEDIUM }]
+    Email;
+    @UI.lineItem: [{ importance: #MEDIUM }]
+    @UI.identification: [{ importance: #MEDIUM }]
+    Telephone;
+    @UI.identification: [{ importance: #LOW }]
+    Discount;
+
+    
+}

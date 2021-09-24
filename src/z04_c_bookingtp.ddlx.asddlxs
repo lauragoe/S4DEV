@@ -1,0 +1,44 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo.typeName: 'Flight Bookings'
+@UI.headerInfo.typeNamePlural: 'Flight Booking'
+@UI.headerInfo.title: { value: 'BookingNumber' }
+@UI.headerInfo.description: { value: 'BookingDate' }
+annotate view Z04_C_BOOKINGTP
+    with 
+{
+    @UI.facet: [{ label: 'Booking Data',
+                  type: #IDENTIFICATION_REFERENCE}]
+    @UI.hidden
+    BookingGuid;
+    @UI.lineItem: [{ importance: #HIGH }]
+    @UI.identification: [{ importance: #HIGH }]
+    AirlineID;
+    @UI.lineItem: [{ importance: #HIGH }]
+    @UI.identification: [{ importance: #HIGH }]
+    ConnectionNumber;
+    @UI.lineItem: [{ importance: #HIGH }]
+    @UI.identification: [{ importance: #HIGH }]
+    FlightDate;
+    @UI.lineItem: [{ importance: #HIGH }]
+    @UI.identification: [{ importance: #HIGH }]
+    BookingNumber;
+    @UI.lineItem: [{ importance: #MEDIUM }]
+    @UI.identification: [{ importance: #MEDIUM }]
+    BookingDate;
+    @UI.identification: [{ importance: #MEDIUM }]
+    Class;
+    @UI.lineItem: [{ importance: #MEDIUM }]
+    @UI.identification: [{ importance: #MEDIUM }]
+    ForeignCurrencyPayment;
+    @UI.identification: [{ importance: #MEDIUM }]
+    ForeignCurrency;
+    @UI.identification: [{ importance: #LOW }]
+    AgencyNumber;
+    @UI.hidden
+    CustomerGuid;
+    @UI.lineItem: [{ importance: #MEDIUM }]
+    @UI.identification: [{ importance: #MEDIUM }]
+    IsCancelled;
+
+    
+}

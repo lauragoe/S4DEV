@@ -1,0 +1,11 @@
+@EndUserText.label: 'exercise 5.3'
+@MappingRole: true
+define role Z04_C_BOOKINGTP {
+    grant 
+        select
+            on
+                Z04_C_BOOKINGTP
+                    where
+                        (AirlineID) = aspect pfcg_auth(S_CARRID, CARRID, ACTVT = '03');
+                        
+}
